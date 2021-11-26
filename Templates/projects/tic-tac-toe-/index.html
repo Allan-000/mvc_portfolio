@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X O spel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Wellcome to tic tac toe game:</h2>
+        <span>Enter players name here:</span>
+        <input class="player-name-input" type="text">
+        <button class="add-player">Add player</button>
+    </header>
+    
+    <div class="container">
+        <div class="player1">
+            <div>Name:</div>
+            <div class="player1-name"></div>
+            <div>Symbol X :</div>
+            <div>Points: <span class="player1-points">0</span></div>
+        </div>
+        <div class="playing-board">
+            <div class="first-field"></div>
+            
+            <div class="second-field"></div>
+                
+            <div class="third-field"></div>
+                
+            <div class="fourth-field"></div>
+                
+            <div class="fifth-field"></div>
+            
+            <div class="sixth-field"></div>
+                
+            <div class="sevens-field"></div>
+            
+            <div class="eights-field"></div>
+                
+            <div class="nines-field"></div>
+        </div>
+        <div class="player2">
+            <div>Name:</div>
+            <div class="player2-name"></div>
+            <div class="player2-symbol">Symbol O:</div>
+            <div>Points: <span class="player2-points">0</span></div>
+        </div>
+    </div>
+    <button class="reset-fields">Reset the fields</button>
+    <button class="restart-button" type="button">Restart the game:</button>
+    <script type="module" src="./tic_tac_toe_js/main.js"></script>
+</body>
+</html>

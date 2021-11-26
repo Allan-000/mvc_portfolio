@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: linear-gradient(to right, #ffd6ff, #bcf8ff );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+.box{
+    padding: 30px 30px 80px 30px;
+    margin-top:40px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgb(172, 171, 171);
+    height: 240px;
+    width: 60%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+h3,h4{
+    margin-top: 50px;
+    text-align: center;
+}
+.select{
+    border-radius:10px;
+}
+.km-to-mile-calculate-button ,.cel-to-fahrenheit-calculate-button ,.age-calculate-button{
+    margin-bottom: 10px;
+}
+.go-bottun ,.km-to-mile-calculate-button ,.cel-to-fahrenheit-calculate-button ,.age-calculate-button{
+    margin-top: 24px;
+    padding: 20px 10px 35px 10px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    transition: 300ms;
+    padding: 20px 10px 40px 10px;
+    font-size: 20px;
+}
+select:hover , option:hover {
+    cursor: pointer;
+}
+label{
+    padding-bottom: 20px;
+}
+.backward-button{
+    padding: 20px 10px 35px 10px;
+    height: 45px;
+    padding: 20px 10px 35px 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    transition: 300ms;
+}
+.backward-button:hover ,.go-bottun:hover ,.km-to-mile-calculate-button:hover ,.cel-to-fahrenheit-calculate-button:hover ,.age-calculate-button:hover{
+    cursor: pointer;
+    box-shadow: 6px 6px 30px rgb(173, 173, 173);
+}
