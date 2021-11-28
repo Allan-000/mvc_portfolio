@@ -2,25 +2,68 @@
 <html lang="en">
 <head>
     <?php
-    include_once ('./defualts/head.php');
+    include_once ('../Templates/defaults/head.php');
     ?>
 </head>
 <body>
 <?php
-include ("./defualts/jumbotron.php");
-include ("./defualts/navbar.php");
-include ("./defualts/home.php");
-include ("./defualts/projecten.php");
-include ("./defualts/vaardigheden.php");
-include ("./defualts/studie.php");
-include ("./defualts/contact.php");
-include ("./defualts/footer.php");
+$title="";
+$request = $_SERVER['REQUEST_URI'];
+$params = explode("/", $request);
+switch($params[1]){
+    case 'home':
+    $title=' | home';
+    include('../Templates/jumbotron.php');
+    include ('../Templates/defaults/navbar.php');
+    include_once ('../Templates/home.php');
+    include_once ('../Templates/defaults/footer.php');
+    break;
+    case 'projecten':
+        $title= ' |projecten';
+        include('../Templates/jumbotron.php');
+        include ('../Templates/defaults/navbar.php');
+        include_once ('../Templates/projecten.php');
+        include_once ('../Templates/defaults/footer.php');
+        break;
+    case 'vaardigheden':
+        $title=' |vaardigheden';
+        include_once ('../Templates/jumbotron.php');
+        include_once ('../Templates/defaults/navbar.php');
+        include_once ('../Templates/vaardigheden.php');
+        include_once ('../Templates/defaults/footer.php');
+        break;
+    case 'studie':
+        $title=' |studie';
+        include_once ('../Templates/jumbotron.php');
+        include_once ('../Templates/defaults/navbar.php');
+        include_once ('../Templates/studie.php');
+        include_once ('../Templates/defaults/footer.php');
+        break;
+    case 'contact';
+        include_once ('../Templates/jumbotron.php');
+        include_once ('../Templates/defaults/navbar.php');
+        include_once ('../Templates/contact.php');
+        include_once ('../Templates/defaults/footer.php');
+        break;
+    default:
+        $title=' | home';
+        include('../Templates/jumbotron.php');
+        include ('../Templates/defaults/navbar.php');
+        echo "<h2 class='p-4 text-center'>Error 404 page not found</h2>";
+        include_once ('../Templates/defaults/footer.php');
+        break;
+}
+
+
+
+
+
+
+function getTitle(){
+    global $title;
+    echo $title;
+}
 ?>
 
-
-
-
-<script src="./index.js"></script>
-<script src="./bootstrap-5.0.2/js/bootstrap.js"></script>
 </body>
 </html>

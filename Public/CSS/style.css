@@ -3,7 +3,7 @@
 }
 .jumbotron {
     height: 80vh;
-    background: url(./img/jumbotron-backgound.jpg);
+    background: url('/img/Jumbotron-backgound.jpg');
     background-size: cover;
     border-radius: .3rem;
     display: flex;
@@ -96,13 +96,13 @@ textarea{
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    background: url(./img/moon.png);
+    background: url(/img/moon.png);
     background-size: cover;
     transition: 200ms;
 }
 .theme-switcher label input:checked + .box-slider{
     transform: translateX(30px);
-    background: url(./img/sun.png);
+    background: url(/img/sun.png);
     background-size: cover;
 }
 .themed-text{

@@ -2,7 +2,8 @@ let themeableTexts =document.querySelectorAll(".themeable-text");
 let themeSwitcherBtn=document.querySelector(".theme-toggler");
 let bodyBackground=document.querySelector("body");
 let hrs=document.querySelectorAll("hr");
-themeSwitcherBtn.addEventListener("click",()=>{
+console.log(themeSwitcherBtn);
+themeSwitcherBtn.addEventListener('click',function(){
     bodyBackground.classList.toggle("themed-body");
     for(let i = 0; i<themeableTexts.length ; i++){
         themeableTexts[i].classList.toggle("themed-text");
@@ -11,4 +12,3 @@ themeSwitcherBtn.addEventListener("click",()=>{
         hrs[y].classList.toggle("themed-hr");
     }
 })
-console.log(hrs)
