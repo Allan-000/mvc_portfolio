@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <?php
+    include_once ('../Templates/defaults/head.php');
+    ?>
+</head>
+<body>
 <section id="contact" class="container">
     <h2 class="text-center py-5 themeable-text">Contact</h2>
     <form>
@@ -10,4 +18,6 @@
         <input class="btn-primary submit my-5" type="submit">
     </form>
 </section>
+</body>
+</html>
 <hr>

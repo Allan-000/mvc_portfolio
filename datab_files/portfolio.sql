@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2021 at 10:20 PM
+-- Generation Time: Dec 29, 2021 at 05:07 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,13 +48,25 @@ INSERT INTO `languages` (`id`, `name`, `logo`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `language_row`
+--
+
+CREATE TABLE `language_row` (
+  `id` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `project`
 --
 
 CREATE TABLE `project` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `picture` varchar(255) NOT NULL,
+  `picture` varchar(512) NOT NULL,
   `description` text NOT NULL,
   `github_link` varchar(255) DEFAULT NULL,
   `page_link` varchar(255) DEFAULT NULL
@@ -82,6 +94,14 @@ ALTER TABLE `languages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `language_row`
+--
+ALTER TABLE `language_row`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `language_id` (`language_id`),
+  ADD KEY `project_id` (`project_id`);
+
+--
 -- Indexes for table `project`
 --
 ALTER TABLE `project`
@@ -98,10 +118,27 @@ ALTER TABLE `languages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `language_row`
+--
+ALTER TABLE `language_row`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `language_row`
+--
+ALTER TABLE `language_row`
+  ADD CONSTRAINT `language_row_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`),
+  ADD CONSTRAINT `language_row_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
