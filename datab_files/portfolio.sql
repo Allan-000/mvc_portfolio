@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2021 at 05:07 PM
+-- Generation Time: Jan 13, 2022 at 01:25 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -81,7 +81,8 @@ INSERT INTO `project` (`id`, `name`, `picture`, `description`, `github_link`, `p
 (2, 'Reken Tool', 'rekenmachine.jpg', 'De reken tool is een programmatje, waarmee een paar eenvoudige berekeningen uitgevoerd kunnen worden.', NULL, 'https://allan-000.github.io/Rekentool/index.html'),
 (3, 'Boter Kaas en Eiren', 'tic-tac-toe.png', 'Boter kaas en eiren oftewel tic tac toe, is een traditionele spel die gespeeld wordt met twee spelers.\r\nDe eerste speler die een lijn tekent,wint en krijgt een punt.\r\nDeze project is gemaakt met javascript.', NULL, 'https://allan-000.github.io/tic-tac-toe-/index.html'),
 (4, 'De buienrader', 'buienrader.jpg', 'benieuwed hoe het weer is nu ... check mijn buienrader app, ontwikkeld met javascript programeer taal', NULL, 'https://allan-000.github.io/buienrader/index.html'),
-(5, 'Interaction design', 'interaction_design.png', 'Met deze project heb ik geleerd hoe ik vanaf een probleemstelling tot meerdere oplossing kom en het beste ervan kiezen.\r\nDeze concnept is een informatie referentie voor de opleiding tot Software Developer.', NULL, 'https://allan-000.github.io/interaction-design/index.html');
+(5, 'Interaction design', 'interaction_design.png', 'Met deze project heb ik geleerd hoe ik vanaf een probleemstelling tot meerdere oplossing kom en het beste ervan kiezen.\r\nDeze concnept is een informatie referentie voor de opleiding tot Software Developer.', NULL, 'https://allan-000.github.io/interaction-design/index.html'),
+(7, 'Zuzu restaurant', 'sushi-restaurant.jpg', 'Bij deze web appkun je verschillende sushi\'s bestellen.\r\nDe app is gemaakt met combinatie van php, sql en bootstrap, en het is gestructureerd volgens de MVC model.', 'https://github.com/Allan-000/zuzu', NULL);
 
 --
 -- Indexes for dumped tables
@@ -127,7 +128,7 @@ ALTER TABLE `language_row`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
